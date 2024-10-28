@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Total de Alunos Text -->
+    <TextView
+        android:id="@+id/totalAlunosText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:fontFamily="sans-serif-medium"
+        android:padding="8dp"
+        android:text="Existem 0 alunos"
+        android:textColor="@android:color/black"
+        android:textSize="18sp" />
+
+    <!-- Container para Formulários -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/rounded_background"> <!-- Fundo arredondado -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Nome do Aluno Input -->
+            <EditText
+                android:id="@+id/nomeAluno"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/rounded_edittext_background"
+                android:backgroundTint="@color/gray"
+                android:fontFamily="sans-serif"
+                android:hint="Nome do Aluno"
+                android:padding="12dp"
+                android:textColor="@android:color/black" />
+
+            <!-- Email do Aluno Input -->
+            <EditText
+                android:id="@+id/emailAluno"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/rounded_edittext_background"
+                android:backgroundTint="@color/gray"
+                android:fontFamily="sans-serif"
+                android:hint="Email do Aluno"
+                android:padding="12dp"
+                android:textColor="@android:color/black" />
+
+            <!-- Botões de Ação -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <Button
+                    android:id="@+id/inserirButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:padding="8dp"
+                    android:text="Inserir"
+                    android:textSize="14sp" />
+
+                <Button
+                    android:id="@+id/editarButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/colorAccent"
+                    android:padding="8dp"
+                    android:text="Editar"
+                    android:textSize="14sp" />
+
+                <Button
+                    android:id="@+id/deletarButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/red"
+                    android:padding="8dp"
+                    android:text="Deletar"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Lista de Alunos -->
+    <ListView
+        android:id="@+id/listaAlunos"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@android:color/white"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="1dp"
+        android:paddingTop="16dp" />
+
+</LinearLayout>
